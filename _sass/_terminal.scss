@@ -1,0 +1,81 @@
+@import "common";
+
+html {
+  text-rendering: optimizeLegibility;
+  text-align: justify;
+}
+
+body {
+  @include flex(column);
+
+  max-width: 840px;
+  height: 100vh;
+  margin: 0 auto;
+
+  background: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.header {
+  @include flex();
+  -webkit-box-pack: space-evenly;
+     -ms-flex-pack: space-evenly;
+   justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+  padding: 20px;
+  margin: 40px 0 60px;
+
+  a {
+    color: #111;
+    font-size: 1.5em;
+    border-bottom: 2px dashed #111;
+    @include material-transition();
+  }
+}
+
+.content {
+  -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+  height: 100%;
+  width: 90%;
+}
+
+.contact {
+  text-align: center;
+}
+
+@media (min-width: 769px) {
+  .header {
+    a:hover {
+      color: #111;
+      -webkit-transform: scale(1.05);
+              transform: scale(1.05);
+      border-bottom: 2px solid #ffea00;
+    }
+  }
+}
+
+@media (max-width: 415px) {
+  .header {
+    margin: 0 0 20px 0;
+    -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+     justify-content: space-between;
+
+    a {
+      font-size: .88em;
+    }
+  }
+
+  .content {
+    padding: 0 10px;
+    width: 95%;
+  }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ site.title }}</title>
+
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    {% include favicon.html %}
+
+    <script src="https://kit.fontawesome.com/70b5d3897d.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
+    <script src="{{ "/assets/js/terminal-client.js" }}"></script>
+    <link href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ "/assets/css/terminal.css" }}">
+    {% seo %}
+  </head>
+  <body>
+    <div class="header">
+      <a href="/">{{ site.title }}</a>
+    </div>
+
+    <div id="terminal" class="content">
+    </div>
+
+    <footer>
+      {% include contact.html %}
+    </footer>
+  </body>
+</html>

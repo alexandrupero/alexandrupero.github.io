@@ -1,0 +1,23 @@
+sass:
+  style: compressed
+
+defaults:
+  -
+    scope:
+      path: "assets/img"
+    values:
+      image: true
+
+remote_theme: showzeng/Minimalism
+
+lang: en
+avatar: assets/img/avatar.jpg
+favicon: assets/img/favicon.ico
+title: alex roman
+name: alex roman
+description: Personal website and interactive CV of Alex Roman, software developer.
+
+github: https://github.com/alexandrupero
+dev: 
+instagram: https://www.instagram.com/alexandrupero
+linkedin: https://www.linkedin.com/in/alexandrupetruroman

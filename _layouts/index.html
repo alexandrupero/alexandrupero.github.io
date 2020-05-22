@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ site.title }}</title>
+
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    {% include favicon.html %}
+
+    <script src="https://kit.fontawesome.com/70b5d3897d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ "/assets/css/index.css" }}" />
+    {% seo %}
+  </head>
+  <body>
+    <div class="index-avatar">
+      {% if site.avatar %}
+      <a href="/terminal"><img src="{{ site.avatar }}" alt="avatar"></a>
+      {% else %}
+        {% assign image_files = site.static_files | where: "image", true %}
+        {% for image in image_files %}
+          {% if image.basename == 'avatar' %}
+          <a href="/terminal"><img src="{{ image.path }}" alt="avatar"></a>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    </div>
+    <div class="index-content">
+      <h1>{{ site.name }}</h1>
+      {% include contact.html %}
+    </div>
+  </body>
+</html>
