@@ -20,5 +20,5 @@ jobs:
           cache: 'yarn'
       - name: Install dependencies
         run: yarn --frozen-lockfile
-      - name: Test
-        run: npm test
+      - run: npm run lint
+      - run: npm run test

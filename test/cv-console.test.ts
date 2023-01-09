@@ -1,8 +1,7 @@
 import { html } from 'lit';
 import { fixture, expect } from '@open-wc/testing';
 
-import { CvConsole } from '../src/Cv-Console.js';
-import '../src/cv-console.js';
+import { CvConsole } from '../src/cv-console.js';
 
 describe('CvConsole', () => {
   let element: CvConsole;
