@@ -1,4 +1,4 @@
-name: Main CI
+name: Install dependencies, lint, build & test
 
 on:
   push:
@@ -21,4 +21,5 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
       - run: npm run lint
+      - run: npm run build --if-present
       - run: npm run test
