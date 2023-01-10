@@ -1,4 +1,4 @@
-name: Install dependencies, lint, build & test
+name: Lint, build & test
 
 on:
   push:
