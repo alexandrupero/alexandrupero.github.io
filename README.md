@@ -1,8 +1,4 @@
-![tests](https://github.com/alexandrupero/alexandrupero.github.io/actions/workflows/main.yml/badge.svg)
-
-<p align="center">
-  <img width="200" src="https://open-wc.org/hero.png"></img>
-</p>
+![tests](https://github.com/alexandrupero/alexandrupero.github.io/actions/workflows/main.yaml/badge.svg)
 
 ## Open-wc Starter App
 
