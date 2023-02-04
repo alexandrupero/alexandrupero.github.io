@@ -6,11 +6,23 @@
 
 ## Quickstart
 
-To get started:
+To get started, you will need [asdf](https://asdf-vm.com/), or manually install the node version in `.tool-versions`
 
 ```sh
-npm init @open-wc
-# requires node 10 & npm 6 or higher
+asdf install
+```
+
+Enable [corepack](https://nodejs.org/dist/latest/docs/api/corepack.html)
+
+```sh
+corepack enable
+```
+
+Install node packages using [ni](https://github.com/antfu/ni) or yarn
+
+```sh
+npm i -g @antfu/ni # install ni
+ni --frozen
 ```
 
 ## Scripts
@@ -20,9 +32,3 @@ npm init @open-wc
 - `build` builds your app and outputs it in your `dist` directory
 - `test` runs your test suite with Web Test Runner
 - `lint` runs the linter for your project
-
-## Tooling configs
-
-For most of the tools, the configuration is in the `package.json` to reduce the amount of files in your project.
-
-If you customize the configuration a lot, you can consider moving them to individual files.
