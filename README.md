@@ -1,4 +1,4 @@
-![ci](https://github.com/alexandrupero/alexandrupero.github.io/actions/workflows/ci.yaml/badge.svg)
+[![ci](https://github.com/alexandrupero/alexandrupero.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/alexandrupero/alexandrupero.github.io/actions/workflows/ci.yml)
 
 # alexandrupero.github.io
 

@@ -49,6 +49,13 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v2
 
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
       - name: Get pnpm store directory
         id: pnpm-cache
         shell: bash
