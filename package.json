@@ -1,90 +1,59 @@
 {
-  "name": "cv-console",
-  "description": "Webcomponent cv-console following open-wc recommendations",
-  "license": "MIT",
-  "author": "cv-console",
-  "version": "0.0.0",
+  "name": "alexandrupero.github.io",
+  "version": "1.0.0",
+  "private": true,
   "scripts": {
-    "lint": "eslint --ext .ts,.html . --ignore-path .gitignore && prettier \"**/*.ts\" --check --ignore-path .gitignore",
-    "format": "eslint --ext .ts,.html . --fix --ignore-path .gitignore && prettier \"**/*.ts\" --write --ignore-path .gitignore",
-    "test": "tsc && wtr --coverage",
-    "test:watch": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wtr --watch\"",
-    "build": "rimraf dist && tsc && rollup -c rollup.config.js && npm run analyze -- --exclude dist",
-    "start:build": "web-dev-server --root-dir dist --app-index index.html --open",
-    "analyze": "cem analyze --litelement",
-    "start": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\""
-  },
-  "dependencies": {
-    "lit": "^2.0.2"
-  },
-  "devDependencies": {
-    "@babel/preset-env": "^7.16.4",
-    "@custom-elements-manifest/analyzer": "^0.4.17",
-    "@open-wc/building-rollup": "^2.0.2",
-    "@open-wc/eslint-config": "^9.0.0",
-    "@open-wc/testing": "^3.1.6",
-    "@rollup/plugin-babel": "^5.3.0",
-    "@rollup/plugin-node-resolve": "^13.0.6",
-    "@typescript-eslint/eslint-plugin": "^5.48.0",
-    "@typescript-eslint/parser": "^5.48.0",
-    "@web/dev-server": "^0.1.34",
-    "@web/rollup-plugin-html": "^1.11.0",
-    "@web/rollup-plugin-import-meta-assets": "^1.0.7",
-    "@web/test-runner": "^0.14.0",
-    "babel-plugin-template-html-minifier": "^4.1.0",
-    "concurrently": "^5.3.0",
-    "deepmerge": "^4.2.2",
-    "esbuild": "^0.16.16",
-    "eslint": "^8.31.0",
-    "eslint-config-prettier": "^8.3.0",
-    "husky": "^4.3.8",
-    "lint-staged": "^10.5.4",
-    "prettier": "^2.4.1",
-    "rimraf": "^3.0.2",
-    "rollup": "^2.60.0",
-    "rollup-plugin-esbuild": "^5.0.0",
-    "rollup-plugin-workbox": "^6.2.0",
-    "tslib": "^2.3.1",
-    "typescript": "^4.5.2"
-  },
-  "eslintConfig": {
-    "parser": "@typescript-eslint/parser",
-    "extends": [
-      "@open-wc",
-      "prettier"
-    ],
-    "plugins": [
-      "@typescript-eslint"
-    ],
-    "rules": {
-      "no-unused-vars": "off",
-      "@typescript-eslint/no-unused-vars": [
-        "error"
-      ],
-      "import/no-unresolved": "off",
-      "import/extensions": [
-        "error",
-        "always",
-        {
-          "ignorePackages": true
-        }
-      ]
-    }
-  },
-  "prettier": {
-    "singleQuote": true,
-    "arrowParens": "avoid"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
+    "lint:style": "stylelint \"**/*.{css,scss,sass,html,vue}\" --ignore-path .gitignore",
+    "lint:prettier": "prettier --check .",
+    "lint": "yarn lint:js && yarn lint:style && yarn lint:prettier",
+    "lintfix": "prettier --write --list-different . && yarn lint:js --fix && yarn lint:style --fix",
+    "prepare": "husky install"
   },
   "lint-staged": {
-    "*.ts": [
-      "eslint --fix",
-      "prettier --write"
-    ]
+    "*.{js,ts,vue}": "eslint --cache",
+    "*.{css,scss,sass,html,vue}": "stylelint",
+    "*.**": "prettier --check --ignore-unknown"
   },
-  "customElements": "custom-elements.json"
+  "dependencies": {
+    "@babel/core": "^7.20.12",
+    "core-js": "^3.27.2",
+    "lint": "^0.8.19",
+    "nuxt": "^3.2.0",
+    "vue": "^3.2.47",
+    "vue-router": "^4.1.6",
+    "vue-server-renderer": "^2.7.14",
+    "vue-template-compiler": "^2.7.14"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.19.1",
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
+    "@nuxt/types": "^2.16.0",
+    "@nuxt/typescript-build": "^2.1.0",
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@nuxtjs/eslint-module": "^3.1.0",
+    "@nuxtjs/tailwindcss": "^6.4.0",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-vue": "^9.9.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.1",
+    "nuxt-vite": "^0.3.5",
+    "postcss": "^8.4.21",
+    "postcss-html": "^1.5.0",
+    "prettier": "^2.8.4",
+    "stylelint": "^15.1.0",
+    "stylelint-config-recommended-vue": "^1.4.0",
+    "stylelint-config-standard": "^30.0.1",
+    "typescript": "^4.9.5",
+    "vite": "^4.1.1",
+    "vite-plugin-stylelint": "^4.2.0",
+    "webpack": "^5.75.0"
+  }
 }
