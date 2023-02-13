@@ -43,4 +43,10 @@ export default {
   build: {},
 
   typescript: { strict: true },
+
+  runtimeConfig: {
+    public: {
+      maintenanceMode: process.env.MAINTENANCE_MODE,
+    },
+  },
 }
