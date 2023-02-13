@@ -1,7 +1,7 @@
 <template>
   <div>
     <NuxtLayout>
-      <NuxtPage />
+      <CvTerminal />
     </NuxtLayout>
   </div>
 </template>
