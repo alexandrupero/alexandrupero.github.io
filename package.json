@@ -13,7 +13,8 @@
     "lint": "pnpm lint:js && pnpm lint:style && pnpm lint:prettier",
     "lintfix": "prettier --write --list-different . && pnpm lint:js --fix && pnpm lint:style --fix",
     "prepare": "husky install",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "typecheck": "tsc"
   },
   "lint-staged": {
     "*.{js,ts,vue}": "eslint --cache",
@@ -22,6 +23,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.20.12",
+    "@types/node": "^18.13.0",
     "core-js": "^3.27.2",
     "daisyui": "^2.50.0",
     "lint": "^0.8.19",
@@ -34,6 +36,7 @@
     "@babel/eslint-parser": "^7.19.1",
     "@commitlint/cli": "^17.4.2",
     "@commitlint/config-conventional": "^17.4.2",
+    "@nuxt/devtools": "^0.1.3",
     "@nuxt/types": "^2.16.0",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
