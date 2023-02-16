@@ -14,17 +14,30 @@
    |o o|__
    --*--__\
    C_C_(___)</code></pre>
-      <pre><code>
-Available commands:
-  bla - blabla</code></pre>
+      <pre><code>To see a list of supported commands, run:
+  help
+      </code></pre>
     </div>
-    <pre
-      data-prefix="$"
-    ><input type="text" placeholder="Type here" class="terminal-input pl-0 input-sm input-ghost bg-base-300 w-11/12" autofocus /></pre>
+    <pre data-prefix="$"><input
+        v-model.trim="terminalInput"
+        type="text"
+        placeholder="Type here"
+        class="terminal-input pl-0 input-sm input-ghost bg-base-300 w-11/12"
+        autofocus
+        @keyup.enter="onTerminalEnterKey" />
+    </pre>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const terminalInput = useState<string>('terminalInput')
+const { executeCommand } = useCommands() // TODO: This is breaking the app
+
+const onTerminalEnterKey = () => {
+  executeCommand(terminalInput.value)
+  terminalInput.value = ''
+}
+</script>
 
 <style scoped>
 .terminal-input:focus {
