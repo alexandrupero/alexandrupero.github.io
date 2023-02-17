@@ -40,7 +40,21 @@ export default {
 
     // https://github.com/nuxt/devtools
     '@nuxt/devtools',
+
+    // https://pinia.vuejs.org
+    '@pinia/nuxt',
   ],
+
+  pinia: {
+    autoImports: [
+      // automatically imports `defineStore`
+      'defineStore', // import { defineStore } from 'pinia'
+    ],
+  },
+
+  experimental: {
+    reactivityTransform: true,
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

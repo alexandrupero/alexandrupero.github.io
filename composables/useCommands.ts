@@ -1,22 +1,21 @@
-const { add: addCommandToHistory } = useCommandHistory()
-
-const commandNotFoundMessage = (
-  commandName: string
-) => `Unknown command: "${commandName}"
-
-To see a list of supported commands, run:
-  help`
+import { MESSAGE_COMMAND_NOT_FOUND } from '~~/constants/messages'
+import { useCommandHistoryStore } from '~~/store/commandHistory'
 
 export const useCommands = () => {
-  const executeCommand = (commandString: string): void => {
-    const command = getAvailableCommands().find((c) => c.name === commandString)
+  const commandHistory = useCommandHistoryStore()
 
-    addCommandToHistory(
-      commandString,
-      command === undefined
-        ? commandNotFoundMessage(commandString)
-        : command.execute()
+  const executeCommand = (commandName: string): void => {
+    const command = getAvailableCommands().find(
+      (c) => c.name === commandName || c.aliases?.includes(commandName)
     )
+
+    commandHistory.items.push({
+      command: commandName,
+      output:
+        command === undefined
+          ? MESSAGE_COMMAND_NOT_FOUND(commandName)
+          : command.execute(),
+    })
   }
 
   return { executeCommand }

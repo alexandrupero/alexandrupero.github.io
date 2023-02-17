@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .cv-terminal-container {
+    @apply card bg-base-300 text-base-content text-sm overflow-x-clip overflow-y-scroll h-full w-full flex flex-col-reverse;
+  }
+
+  .terminal-input {
+    @apply pl-0 text-neutral-200 input-sm input-ghost bg-base-300 w-11/12;
+  }
+
+  .terminal-input:focus {
+    @apply text-neutral-200;
+  }
+
+  .terminal-prefix {
+    @apply text-neutral-400 pr-3;
+  }
+
+  .terminal-output {
+    @apply text-neutral-300;
+  }
+
+  .terminal-card {
+    @apply card bg-base-100 shadow-xl mx-auto md:w-3/4 lg:w-2/3 xl:w-1/2 w-full;
+  }
+}
