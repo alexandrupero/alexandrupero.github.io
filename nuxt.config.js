@@ -72,8 +72,4 @@ export default {
       maintenanceMode: process.env.MAINTENANCE_MODE,
     },
   },
-
-  image: {
-    dir: 'assets/images',
-  },
 }
