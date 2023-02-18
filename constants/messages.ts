@@ -9,12 +9,12 @@ export const MESSAGE_TERMINAL_HELLO = `
  ----------------------------`
 
 export const MESSAGE_TERMINAL_HELLO_CAT = `
-\\
- \\
- |\\_/|
- |o o|__
- --*--__\\
- C_C_(___)`
+  \\
+   \\
+   |\\_/|
+   |o o|__
+   --*--__\\
+   C_C_(___)`
 
 // 'command not found' error
 export const MESSAGE_COMMAND_NOT_FOUND = (commandName: string) =>
