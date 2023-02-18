@@ -4,5 +4,4 @@ export interface Command {
   usage: string
   aliases?: string[]
   hidden: boolean
-  execute: () => string
 }

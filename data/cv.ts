@@ -121,7 +121,7 @@ const cv: CvData = {
     },
     {
       company: 'The Lotter Enterprises',
-      role: 'Team Lead R&D',
+      role: 'Tech Lead',
       location: 'Bucharest, Romania',
       startDate: new Date('2017-06-01'),
       endDate: new Date('2018-02-01'),
