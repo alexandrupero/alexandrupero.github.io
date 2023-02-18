@@ -31,4 +31,10 @@ const onTerminalEnterKey = () => {
   outline: none;
   border: none;
 }
+
+@supports (-webkit-overflow-scrolling: touch) {
+  input {
+    font-size: 16px;
+  }
+}
 </style>
