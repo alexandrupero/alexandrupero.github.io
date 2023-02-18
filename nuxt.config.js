@@ -46,6 +46,9 @@ export default {
 
     // https://github.com/nuxt-modules/icon
     'nuxt-icon',
+
+    // https://v1.image.nuxtjs.org
+    '@nuxt/image-edge',
   ],
 
   pinia: {
@@ -68,5 +71,9 @@ export default {
     public: {
       maintenanceMode: process.env.MAINTENANCE_MODE,
     },
+  },
+
+  image: {
+    dir: 'assets/images',
   },
 }

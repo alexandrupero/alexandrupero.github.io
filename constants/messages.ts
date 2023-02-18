@@ -23,8 +23,47 @@ export const MESSAGE_COMMAND_NOT_FOUND = (commandName: string) =>
 To see a list of supported commands, run:
 help`
 
-// 'help' command
-export const MESSAGE_COMMAND_HELP_NAME = `help`
-export const MESSAGE_COMMAND_HELP_DESCRIPTION = `Shows this help.`
-export const MESSAGE_COMMAND_HELP_USAGE = `help`
-export const MESSAGE_COMMAND_HELP_ALIASES = ['h']
+export const AVAILABLE_COMMANDS = {
+  help: {
+    name: 'help',
+    description: 'Displays this help message',
+    usage: 'help',
+    aliases: ['h'],
+  },
+  languages: {
+    name: 'languages',
+    description: 'Shows all programming languages I have experience with.',
+    usage: 'languages',
+    aliases: ['l'],
+  },
+  frameworks: {
+    name: 'frameworks',
+    description: 'Shows all software frameworks I have experience with.',
+    usage: 'frameworks',
+    aliases: ['f'],
+  },
+  tools: {
+    name: 'tools',
+    description: 'Shows all software development tools I have experience with.',
+    usage: 'tools',
+    aliases: ['t'],
+  },
+  skills: {
+    name: 'skills',
+    description: 'Shows my programming/soft skills.',
+    usage: 'skills',
+    aliases: ['s'],
+  },
+  contact: {
+    name: 'contact',
+    description: 'Shows my contact details.',
+    usage: 'contact',
+    aliases: ['c'],
+  },
+  experience: {
+    name: 'experience',
+    description: 'Shows my experience details.',
+    usage: 'experience',
+    aliases: ['e', 'xp'],
+  },
+}
