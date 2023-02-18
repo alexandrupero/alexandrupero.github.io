@@ -2,7 +2,7 @@ export interface Command {
   name: string
   description: string
   usage: string
-  aliases?: Array<string>
+  aliases?: string[]
   hidden: boolean
   execute: () => string
 }

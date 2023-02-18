@@ -1,5 +1,6 @@
-import { MESSAGE_COMMAND_NOT_FOUND } from '~~/constants/messages'
+import { getAvailableCommands } from './commands/getAvailableCommands'
 import { useCommandHistoryStore } from '~~/store/commandHistory'
+import { MESSAGE_COMMAND_NOT_FOUND } from '~~/constants/messages'
 
 export const useCommands = () => {
   const commandHistory = useCommandHistoryStore()

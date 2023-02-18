@@ -43,6 +43,9 @@ export default {
 
     // https://pinia.vuejs.org
     '@pinia/nuxt',
+
+    // https://github.com/nuxt-modules/icon
+    'nuxt-icon',
   ],
 
   pinia: {

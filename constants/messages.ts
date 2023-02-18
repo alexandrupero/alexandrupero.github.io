@@ -1,4 +1,4 @@
-// Terminal "Hello"
+// 'hello' terminal prompt
 export const MESSAGE_TERMINAL_HELLO = `
  ____________________________
 / Hi there, it's nice to     \\
@@ -16,9 +16,15 @@ export const MESSAGE_TERMINAL_HELLO_CAT = `
  --*--__\\
  C_C_(___)`
 
-// Command not found
+// 'command not found' error
 export const MESSAGE_COMMAND_NOT_FOUND = (commandName: string) =>
   `Unknown command: "${commandName}"
 
 To see a list of supported commands, run:
-  help`
+help`
+
+// 'help' command
+export const MESSAGE_COMMAND_HELP_NAME = `help`
+export const MESSAGE_COMMAND_HELP_DESCRIPTION = `Shows this help.`
+export const MESSAGE_COMMAND_HELP_USAGE = `help`
+export const MESSAGE_COMMAND_HELP_ALIASES = ['h']
