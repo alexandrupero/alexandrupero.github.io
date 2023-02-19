@@ -66,4 +66,10 @@ export const AVAILABLE_COMMANDS = {
     usage: 'experience',
     aliases: ['e', 'xp'],
   },
+  clear: {
+    name: 'clear',
+    description: 'Clears the screen.',
+    usage: 'clear',
+    aliases: ['cls'],
+  },
 }

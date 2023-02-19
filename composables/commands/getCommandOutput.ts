@@ -3,7 +3,7 @@ import { AVAILABLE_COMMANDS } from '~~/constants/messages'
 import cv from '~~/data/cv'
 import { Command } from '~~/types/command'
 
-export function getCommandOutput(command: Command): string | undefined {
+export function getCommandOutput(command: Command): string {
   switch (command.name) {
     case AVAILABLE_COMMANDS.help.name:
       return getHelpOutput()
@@ -19,6 +19,8 @@ export function getCommandOutput(command: Command): string | undefined {
       return 'Check the links below the terminal.'
     case AVAILABLE_COMMANDS.experience.name:
       return getExperienceOutput()
+    default:
+      return ''
   }
 }
 
