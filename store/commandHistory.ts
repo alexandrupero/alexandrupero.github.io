@@ -9,9 +9,6 @@ export const useCommandHistoryStore = defineStore('commandHistory', () => {
   const previousCommands = $ref([] as string[])
 
   const actions = {
-    getItems(): Readonly<CommandHistory[]> {
-      return readonly(state.items)
-    },
     clearItems(): void {
       state.items = []
     },
@@ -20,6 +17,12 @@ export const useCommandHistoryStore = defineStore('commandHistory', () => {
       previousCommands.push(commandHistory.command)
       // move past the end, so the previous command is the last command
       index = previousCommands.length
+    },
+  }
+
+  const getters = {
+    getItems(): Readonly<CommandHistory[]> {
+      return readonly(state.items)
     },
     nextCommand(): Readonly<string> | null {
       if (index < previousCommands.length) index++ // unless we're at the end
@@ -37,5 +40,5 @@ export const useCommandHistoryStore = defineStore('commandHistory', () => {
     },
   }
 
-  return { ...actions }
+  return { ...actions, ...getters }
 })
