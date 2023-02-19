@@ -1,5 +1,5 @@
 <template>
-  <div v-for="historyItem in commandHistory.items">
+  <div v-for="historyItem in getCommandHistoryItems()">
     <span class="terminal-prefix">></span>
     <code class="text-neutral-100">{{ historyItem.command }}</code>
     <div class="terminal-output">
@@ -15,5 +15,5 @@
 <script setup lang="ts">
 import { useCommandHistoryStore } from '~~/store/commandHistory'
 
-const commandHistory = useCommandHistoryStore()
+const { getItems: getCommandHistoryItems } = useCommandHistoryStore()
 </script>
