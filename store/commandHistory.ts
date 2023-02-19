@@ -24,19 +24,15 @@ export const useCommandHistoryStore = defineStore('commandHistory', () => {
     getItems(): Readonly<CommandHistory[]> {
       return readonly(state.items)
     },
-    nextCommand(): Readonly<string> | null {
-      if (index < previousCommands.length) index++ // unless we're at the end
-      // will return null if we're at the end
-      if (index === previousCommands.length) return null
+    getNextCommand(): Readonly<string> | null {
+      if (index < previousCommands.length) index++
 
-      return previousCommands[index]
+      return previousCommands[index] || null
     },
-    previousCommand(): Readonly<string> | null {
-      // will return null for an empty array or if we're at the beginning
-      if (previousCommands.length === 0 || index === 0) return null
-      index-- // unless we're at the beginning
+    getPreviousCommand(): Readonly<string> | null {
+      if (index > 0) index--
 
-      return previousCommands[index]
+      return previousCommands[index] || null
     },
   }
 

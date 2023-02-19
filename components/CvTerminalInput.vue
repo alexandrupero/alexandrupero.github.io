@@ -21,7 +21,7 @@
 import { useCommandHistoryStore } from '~~/store/commandHistory'
 
 const { executeCommand } = useCommands()
-const { previousCommand, nextCommand } = useCommandHistoryStore()
+const { getPreviousCommand, getNextCommand } = useCommandHistoryStore()
 
 let terminalInput = $ref('')
 
@@ -32,12 +32,12 @@ const onTerminalEnterKey = () => {
 }
 
 const onTerminalUpKey = (event: KeyboardEvent) => {
-  terminalInput = previousCommand() || terminalInput
+  terminalInput = getPreviousCommand() || terminalInput
   event.preventDefault()
 }
 
 const onTerminalDownKey = (event: KeyboardEvent) => {
-  terminalInput = nextCommand() || ''
+  terminalInput = getNextCommand() || ''
   event.preventDefault()
 }
 </script>
