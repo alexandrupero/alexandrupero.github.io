@@ -18,6 +18,7 @@
 </template>
 
 <script setup lang="ts">
+import { useDisplay } from 'vuetify'
 import { useCommandHistoryStore } from '~~/store/commandHistory'
 
 const { executeCommand } = useCommands()
@@ -25,10 +26,13 @@ const { getPreviousCommand, getNextCommand } = useCommandHistoryStore()
 
 let terminalInput = $ref('')
 
-const onTerminalEnterKey = () => {
+const mobile = $ref(useDisplay().mobile) // less than 1280px
+
+const onTerminalEnterKey = (event: KeyboardEvent) => {
   if (!terminalInput) return
   executeCommand(terminalInput)
   terminalInput = ''
+  hideKeyboardOnMobile(event.target as HTMLElement)
 }
 
 const onTerminalUpKey = (event: KeyboardEvent) => {
@@ -39,6 +43,18 @@ const onTerminalUpKey = (event: KeyboardEvent) => {
 const onTerminalDownKey = (event: KeyboardEvent) => {
   terminalInput = getNextCommand() || ''
   event.preventDefault()
+}
+
+const hideKeyboardOnMobile = (inputElement: HTMLElement) => {
+  if (mobile) {
+    inputElement.setAttribute('readonly', 'readonly')
+    inputElement.setAttribute('disabled', 'true')
+    setTimeout(() => {
+      inputElement.blur()
+      inputElement.removeAttribute('readonly')
+      inputElement.removeAttribute('disabled')
+    }, 100)
+  }
 }
 </script>
 

@@ -1,6 +1,6 @@
 {
   "name": "alexandrupero.github.io",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "scripts": {
     "dev": "nuxt dev",
@@ -55,7 +55,7 @@
     "postcss": "^8.4.21",
     "postcss-html": "^1.5.0",
     "prettier": "^2.8.4",
-    "sass": "^1.58.0",
+    "sass": "^1.58.3",
     "stylelint": "^15.1.0",
     "stylelint-config-recommended-vue": "^1.4.0",
     "stylelint-config-standard": "^30.0.1",
@@ -64,6 +64,7 @@
     "vite-plugin-stylelint": "^4.2.0",
     "vue-server-renderer": "^2.7.14",
     "vue-template-compiler": "^2.7.14",
+    "vuetify": "^3.1.4",
     "webpack": "^5.75.0"
   }
 }
