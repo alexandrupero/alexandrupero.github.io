@@ -13,6 +13,8 @@
 
   .terminal-input:focus {
     @apply text-neutral-200;
+    outline: none;
+    border: none;
   }
 
   .terminal-prefix {
@@ -25,5 +27,12 @@
 
   .terminal-card {
     @apply card bg-base-100 shadow-xl mx-auto lg:w-3/4 xl:w-2/3 w-full;
+  }
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+  .terminal-input,
+  .terminal-prefix {
+    font-size: 16px;
   }
 }

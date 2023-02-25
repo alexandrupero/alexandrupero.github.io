@@ -57,16 +57,3 @@ const hideKeyboardOnMobile = (inputElement: HTMLElement) => {
   }
 }
 </script>
-
-<style scoped>
-.terminal-input:focus {
-  outline: none;
-  border: none;
-}
-
-@supports (-webkit-overflow-scrolling: touch) {
-  input {
-    font-size: 16px;
-  }
-}
-</style>
