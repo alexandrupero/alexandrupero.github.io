@@ -74,9 +74,6 @@ const cv: CvData = {
     'Clean code over clever code, Automated testing, CI & CD',
     'DDD, Modular monoliths, Microservices & Micro Frontends',
     'Mentoring/Training',
-    'Collaborative approach to problem solving',
-    'Teamwork & communication',
-    'Organized and a very fast learner',
   ],
   experience: [
     {
