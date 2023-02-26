@@ -24,29 +24,29 @@ import { useCommandHistoryStore } from '~~/store/commandHistory'
 const { executeCommand } = useCommands()
 const { getPreviousCommand, getNextCommand } = useCommandHistoryStore()
 
-let terminalInput = $ref('')
+const terminalInput = ref('')
 
-const mobile = $ref(useDisplay().mobile) // less than 1280px
+const { mobile } = useDisplay() // less than 1280px
 
 const onTerminalEnterKey = (event: KeyboardEvent) => {
   if (!terminalInput) return
-  executeCommand(terminalInput)
-  terminalInput = ''
+  executeCommand(terminalInput.value)
+  terminalInput.value = ''
   hideKeyboardOnMobile(event.target as HTMLElement)
 }
 
 const onTerminalUpKey = (event: KeyboardEvent) => {
-  terminalInput = getPreviousCommand() || terminalInput
+  terminalInput.value = getPreviousCommand() || terminalInput.value
   event.preventDefault()
 }
 
 const onTerminalDownKey = (event: KeyboardEvent) => {
-  terminalInput = getNextCommand() || ''
+  terminalInput.value = getNextCommand() || ''
   event.preventDefault()
 }
 
 const hideKeyboardOnMobile = (inputElement: HTMLElement) => {
-  if (mobile) {
+  if (mobile.value) {
     inputElement.setAttribute('readonly', 'readonly')
     inputElement.setAttribute('disabled', 'true')
     setTimeout(() => {
