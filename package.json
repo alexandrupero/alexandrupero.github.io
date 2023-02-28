@@ -14,6 +14,7 @@
     "lintfix": "prettier --write --list-different . && pnpm lint:js --fix && pnpm lint:style --fix",
     "prepare": "husky install",
     "postinstall": "nuxt prepare",
+    "test": "vitest",
     "typecheck": "tsc"
   },
   "lint-staged": {
@@ -62,6 +63,7 @@
     "typescript": "^4.9.5",
     "vite": "^4.1.1",
     "vite-plugin-stylelint": "^4.2.0",
+    "vitest": "^0.29.2",
     "vue-server-renderer": "^2.7.14",
     "vue-template-compiler": "^2.7.14",
     "vuetify": "^3.1.4",
