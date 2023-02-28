@@ -1,5 +1,5 @@
-import { AVAILABLE_COMMANDS } from '../../constants/messages'
-import { Command } from '../../types/command'
+import { AVAILABLE_COMMANDS } from '~~/constants/messages'
+import { Command } from '~~/types/command'
 
 // Commands
 export class CvCommand implements Command {

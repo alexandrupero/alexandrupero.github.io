@@ -1,8 +1,18 @@
-import { describe, expect, it } from 'vitest'
-import { AVAILABLE_COMMANDS } from '../../constants/messages'
+import { vi, describe, expect, it } from 'vitest'
 import { CvCommand } from './cvCommand'
 
 describe('CvCommand', () => {
+  vi.mock('~~/constants/messages', () => ({
+    AVAILABLE_COMMANDS: {
+      test: {
+        name: 'test name',
+        description: 'test description',
+        usage: 'test usage',
+        aliases: ['test', 'alias'],
+      },
+    },
+  }))
+
   it('throws an error when the command type is not valid', () => {
     expect(() => new CvCommand('not_valid')).toThrowError(
       new TypeError("The type 'not_valid' is not a valid command type.")
@@ -10,13 +20,13 @@ describe('CvCommand', () => {
   })
 
   it('creates a new command when the command type is valid', () => {
-    const cvCommand = new CvCommand('help')
+    const cvCommand = new CvCommand('test')
 
     expect(cvCommand).toMatchObject({
-      name: AVAILABLE_COMMANDS.help.name,
-      description: AVAILABLE_COMMANDS.help.description,
-      usage: AVAILABLE_COMMANDS.help.usage,
-      aliases: AVAILABLE_COMMANDS.help.aliases,
+      name: 'test name',
+      description: 'test description',
+      usage: 'test usage',
+      aliases: ['test', 'alias'],
       hidden: false,
     })
   })
