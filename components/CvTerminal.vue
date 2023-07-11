@@ -4,10 +4,11 @@
       <div class="card-title">
         <code>alexroman.dev</code>
       </div>
-
-      <pre><code>{{MESSAGE_TERMINAL_HELLO}}{{ MESSAGE_TERMINAL_HELLO_CAT }}</code></pre>
-      <CvTerminalHistory />
-      <CvTerminalInput />
+      <main>
+        <pre><code>{{MESSAGE_TERMINAL_HELLO}}{{ MESSAGE_TERMINAL_HELLO_CAT }}</code></pre>
+        <CvTerminalHistory />
+        <CvTerminalInput />
+      </main>
     </div>
   </div>
 </template>

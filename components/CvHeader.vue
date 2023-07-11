@@ -7,6 +7,7 @@
           type="checkbox"
           class="toggle"
           :checked="useGlobalFlags().showTerminal"
+          aria-label="Show Terminal"
           @change="onChecked"
         />
         <IconCSS name="mdi:console" size="32" />
@@ -15,10 +16,10 @@
     <div class="navbar-center">
       <div class="w-24 mask mask-hexagon">
         <nuxt-img
-          src="/avatar.jpg"
+          src="/avatar.png"
           alt="avatar image"
-          width="96px"
-          height="96px"
+          width="192px"
+          height="192px"
         />
       </div>
     </div>

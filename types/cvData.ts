@@ -1,7 +1,7 @@
 export interface CvContactItem {
   github: string
   linkedin: string
-  instagram: string
+  matrix: string
 }
 
 export interface CvExperienceItem {
