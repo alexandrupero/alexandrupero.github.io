@@ -49,7 +49,31 @@ export default {
 
     // https://v1.image.nuxtjs.org
     '@nuxt/image-edge',
+
+    // https://github.com/baroshem/nuxt-security
+    'nuxt-security',
+
+    // https://github.com/nuxt-modules/robots
+    '@nuxtjs/robots',
   ],
+
+  security: {
+    headers: {
+      crossOriginEmbedderPolicy:
+        process.env.NODE_ENV === 'development' ? 'unsafe-none' : 'require-corp',
+      contentSecurityPolicy: {
+        'base-uri': ["'self'"],
+        'font-src': ["'self'", 'https:', 'data:'],
+        'form-action': ["'self'"],
+        'frame-ancestors': ["'self'"],
+        'img-src': ["'self'", 'data:', 'https://api.iconify.design/'],
+        'object-src': ["'none'"],
+        'script-src-attr': ["'none'"],
+        'style-src': ["'self'", 'https:', "'unsafe-inline'"],
+        'upgrade-insecure-requests': true,
+      },
+    },
+  },
 
   pinia: {
     autoImports: [

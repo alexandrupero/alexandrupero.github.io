@@ -44,7 +44,7 @@ function getCommand(commandAndArguments: string[]): Command | null {
       (command) =>
         (command.name === commandName.toLowerCase() ||
           command.aliases?.includes(commandName.toLowerCase())) &&
-        !command.hidden
+        !command.hidden,
     ) || null
   )
 }

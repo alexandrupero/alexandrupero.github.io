@@ -2,13 +2,25 @@
   <footer class="footer footer-center bg-base-100 text-base-content rounded">
     <div :class="{ shake: useGlobalFlags().shakeSocialIcons }">
       <div class="grid grid-flow-col gap-4">
-        <a target="_blank" :href="cv.contact.instagram">
-          <IconCSS name="uil:instagram" size="20" />
+        <a
+          target="_blank"
+          :href="cv.contact.matrix"
+          aria-label="Contact me through Matrix"
+        >
+          <IconCSS name="simple-icons:matrix" size="20" />
         </a>
-        <a target="_blank" :href="cv.contact.github">
+        <a
+          target="_blank"
+          :href="cv.contact.github"
+          aria-label="Contact me through GitHub"
+        >
           <IconCSS name="uil:github-alt" size="20" />
         </a>
-        <a target="_blank" :href="cv.contact.linkedin">
+        <a
+          target="_blank"
+          :href="cv.contact.linkedin"
+          aria-label="Contact me through LinkedIn"
+        >
           <IconCSS name="uil:linkedin-alt" size="20" />
         </a>
       </div>
