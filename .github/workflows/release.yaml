@@ -81,7 +81,7 @@ jobs:
         run: pnpm generate
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
         with:
           # Upload '.output/public' folder
           path: '.output/public'
