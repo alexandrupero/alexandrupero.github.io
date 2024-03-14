@@ -1,5 +1,5 @@
 import { CvCommand } from './cvCommand'
-import { Command } from '~~/types/command'
+import type { Command } from '~~/types/command'
 import { AVAILABLE_COMMANDS } from '~~/constants/messages'
 
 export function getAvailableCommands(): Command[] {

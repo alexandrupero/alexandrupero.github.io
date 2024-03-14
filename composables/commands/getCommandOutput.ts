@@ -1,7 +1,7 @@
 import { getAvailableCommands } from './getAvailableCommands'
 import { AVAILABLE_COMMANDS } from '~~/constants/messages'
 import cv from '~~/data/cv'
-import { Command } from '~~/types/command'
+import type { Command } from '~~/types/command'
 
 export function getCommandOutput(command: Command): string {
   switch (command.name) {

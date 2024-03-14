@@ -1,4 +1,4 @@
-import { CommandHistory } from '~~/types/commandHistory'
+import type { CommandHistory } from '~~/types/commandHistory'
 
 export const useCommandHistoryStore = defineStore('commandHistory', () => {
   const state = ref({

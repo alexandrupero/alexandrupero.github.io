@@ -5,7 +5,7 @@ import {
   AVAILABLE_COMMANDS,
   MESSAGE_COMMAND_NOT_FOUND,
 } from '~~/constants/messages'
-import { Command } from '~~/types/command'
+import type { Command } from '~~/types/command'
 import { useGlobalFlags } from '~~/store/globalFlags'
 
 export const useCommands = () => {

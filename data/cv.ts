@@ -1,4 +1,4 @@
-import { CvData } from '~~/types/cvData'
+import type { CvData } from '~~/types/cvData'
 
 const cv: CvData = {
   name: 'Alex Roman',
