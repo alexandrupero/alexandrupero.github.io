@@ -52,7 +52,7 @@
     "lint": "^0.8.19",
     "lint-staged": "^13.2.3",
     "nuxt-icon": "^0.4.2",
-    "nuxt-security": "^0.13.1",
+    "nuxt-security": "^1.2.2",
     "nuxt-vite": "^0.3.5",
     "postcss": "^8.4.25",
     "postcss-html": "^1.5.0",
