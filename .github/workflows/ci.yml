@@ -27,7 +27,7 @@ jobs:
           node-version: ${{ matrix.node }}
           check-latest: true
 
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v3
         name: Install pnpm
         id: pnpm-install
         with:
