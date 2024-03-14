@@ -48,7 +48,7 @@ devDependencies:
     version: 2.17.0
   '@nuxt/typescript-build':
     specifier: ^3.0.1
-    version: 3.0.1(@nuxt/types@2.17.0)(eslint@8.44.0)(typescript@5.4.2)(vue-template-compiler@2.7.14)(webpack@5.88.1)
+    version: 3.0.1(@nuxt/types@2.17.0)(eslint@8.44.0)(typescript@5.4.2)(vue-template-compiler@2.7.16)(webpack@5.88.1)
   '@nuxtjs/eslint-config-typescript':
     specifier: ^12.0.0
     version: 12.0.0(eslint@8.44.0)(typescript@5.4.2)
@@ -96,7 +96,7 @@ devDependencies:
     version: 1.2.2
   nuxt-vite:
     specifier: ^0.3.5
-    version: 0.3.5(postcss@8.4.25)(sass@1.63.6)(vue-template-compiler@2.7.14)(vue@3.3.4)
+    version: 0.3.5(postcss@8.4.25)(sass@1.63.6)(vue-template-compiler@2.7.16)(vue@3.3.4)
   postcss:
     specifier: ^8.4.25
     version: 8.4.25
@@ -131,8 +131,8 @@ devDependencies:
     specifier: ^2.7.14
     version: 2.7.14
   vue-template-compiler:
-    specifier: ^2.7.14
-    version: 2.7.14
+    specifier: ^2.7.16
+    version: 2.7.16
   vuetify:
     specifier: ^3.3.7
     version: 3.3.7(typescript@5.4.2)(vue@3.3.4)
@@ -1883,7 +1883,7 @@ packages:
       '@types/webpack-hot-middleware': 2.25.5
     dev: true
 
-  /@nuxt/typescript-build@3.0.1(@nuxt/types@2.17.0)(eslint@8.44.0)(typescript@5.4.2)(vue-template-compiler@2.7.14)(webpack@5.88.1):
+  /@nuxt/typescript-build@3.0.1(@nuxt/types@2.17.0)(eslint@8.44.0)(typescript@5.4.2)(vue-template-compiler@2.7.16)(webpack@5.88.1):
     resolution: {integrity: sha512-+9mQuLlwYSDTesyt5lYjWzUit/DD78V+OSzaqGJUkybjS63YZUBcUw6Fr4jAeRreMlseFnJFIjtQQV1osunrhg==}
     peerDependencies:
       '@nuxt/types': '>=2.13.1'
@@ -1892,7 +1892,7 @@ packages:
       '@nuxt/types': 2.17.0
       consola: 2.15.3
       defu: 6.1.2
-      fork-ts-checker-webpack-plugin: 6.5.3(eslint@8.44.0)(typescript@5.4.2)(vue-template-compiler@2.7.14)(webpack@5.88.1)
+      fork-ts-checker-webpack-plugin: 6.5.3(eslint@8.44.0)(typescript@5.4.2)(vue-template-compiler@2.7.16)(webpack@5.88.1)
       ts-loader: 8.4.0(typescript@5.4.2)(webpack@5.88.1)
       typescript: 5.4.2
     transitivePeerDependencies:
@@ -3720,6 +3720,7 @@ packages:
 
   /bl@4.1.0:
     resolution: {integrity: sha512-1W07cM9gS6DcLperZfFSj+bWLtaPGSOHWhPiGzXmvVJbRLdG82sH/Kn8EtW1VqWVA54AKf2h5k5BbnIbwF3h6w==}
+    requiresBuild: true
     dependencies:
       buffer: 5.7.1
       inherits: 2.0.4
@@ -4199,6 +4200,7 @@ packages:
 
   /color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
+    requiresBuild: true
 
   /color-string@1.9.1:
     resolution: {integrity: sha512-shrVawQFojnZv6xM40anx4CkoDP+fZsw/ZerEMsW/pyzsRbElpsL/DBVW7q3ExxwusdNXI3lXpuhEZkzs8p5Eg==}
@@ -6414,7 +6416,7 @@ packages:
     resolution: {integrity: sha512-j0KLYPhm6zeac4lz3oJ3o65qvgQCcPubiyotZrXqEaG4hNagNYO8qdlUrX5vwqv9ohqeT/Z3j6+yW067yWWdUw==}
     dev: true
 
-  /fork-ts-checker-webpack-plugin@6.5.3(eslint@8.44.0)(typescript@5.4.2)(vue-template-compiler@2.7.14)(webpack@5.88.1):
+  /fork-ts-checker-webpack-plugin@6.5.3(eslint@8.44.0)(typescript@5.4.2)(vue-template-compiler@2.7.16)(webpack@5.88.1):
     resolution: {integrity: sha512-SbH/l9ikmMWycd5puHJKTkZJKddF4iRLyW3DeZ08HTI7NGyLS38MXd/KGgeWumQO7YNQbW2u/NtPT2YowbPaGQ==}
     engines: {node: '>=10', yarn: '>=1.0.0'}
     peerDependencies:
@@ -6443,7 +6445,7 @@ packages:
       semver: 7.5.4
       tapable: 1.1.3
       typescript: 5.4.2
-      vue-template-compiler: 2.7.14
+      vue-template-compiler: 2.7.16
       webpack: 5.88.1
     dev: true
 
@@ -8867,7 +8869,7 @@ packages:
       - supports-color
     dev: true
 
-  /nuxt-vite@0.3.5(postcss@8.4.25)(sass@1.63.6)(vue-template-compiler@2.7.14)(vue@3.3.4):
+  /nuxt-vite@0.3.5(postcss@8.4.25)(sass@1.63.6)(vue-template-compiler@2.7.16)(vue@3.3.4):
     resolution: {integrity: sha512-rAtmMycDU4k88S/H8WiCCqzr99lnYPTxgekU7+HYVoLHE62aol2E0/ci1MjBfBVg5DbhKHvqDn1nLCL5ye4Vsg==}
     dependencies:
       '@vitejs/plugin-legacy': 1.8.2(vite@2.9.16)
@@ -8882,7 +8884,7 @@ packages:
       semver: 7.5.4
       ufo: 0.7.11
       vite: 2.9.16(sass@1.63.6)
-      vite-plugin-vue2: 1.9.3(vite@2.9.16)(vue-template-compiler@2.7.14)(vue@3.3.4)
+      vite-plugin-vue2: 1.9.3(vite@2.9.16)(vue-template-compiler@2.7.16)(vue@3.3.4)
     transitivePeerDependencies:
       - arc-templates
       - atpl
@@ -11286,6 +11288,7 @@ packages:
 
   /string_decoder@1.3.0:
     resolution: {integrity: sha512-hkRX8U1WjJFd8LsDJ2yQ/wWWxaopEsABU1XfkM8A+j0+85JAGppt16cr1Whg6KIbb4okU6Mql6BOj+uup/wKeA==}
+    requiresBuild: true
     dependencies:
       safe-buffer: 5.2.1
 
@@ -12484,7 +12487,7 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-vue2@1.9.3(vite@2.9.16)(vue-template-compiler@2.7.14)(vue@3.3.4):
+  /vite-plugin-vue2@1.9.3(vite@2.9.16)(vue-template-compiler@2.7.16)(vue@3.3.4):
     resolution: {integrity: sha512-0KhHSEeht0VHJtt4Z2cJ9bWBq4dP3HoXpapqAHV+f+cUa6KywYdOd+z6sSGLpuGjN8F9YinrFIo8dfVmMOpc8Q==}
     peerDependencies:
       vite: ^2.0.0-beta.23
@@ -12510,7 +12513,7 @@ packages:
       slash: 3.0.0
       source-map: 0.7.4
       vite: 2.9.16(sass@1.63.6)
-      vue-template-compiler: 2.7.14
+      vue-template-compiler: 2.7.16
       vue-template-es2015-compiler: 1.9.1
     transitivePeerDependencies:
       - arc-templates
@@ -12759,8 +12762,8 @@ packages:
       source-map: 0.5.6
     dev: true
 
-  /vue-template-compiler@2.7.14:
-    resolution: {integrity: sha512-zyA5Y3ArvVG0NacJDkkzJuPQDF8RFeRlzV2vLeSnhSpieO6LK2OVbdLPi5MPPs09Ii+gMO8nY4S3iKQxBxDmWQ==}
+  /vue-template-compiler@2.7.16:
+    resolution: {integrity: sha512-AYbUWAJHLGGQM7+cNTELw+KsOG9nl2CnSv467WobS5Cv9uk3wFcnr1Etsz2sEIHEZvw1U+o9mRlEO6QbZvUPGQ==}
     dependencies:
       de-indent: 1.0.2
       he: 1.2.0
