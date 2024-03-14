@@ -44,7 +44,7 @@
     "@types/node": "^20.4.1",
     "autoprefixer": "^10.4.14",
     "core-js": "^3.31.1",
-    "eslint": "^8.44.0",
+    "eslint": "^8.57.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-vue": "^9.15.1",
