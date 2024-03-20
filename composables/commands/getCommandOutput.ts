@@ -46,7 +46,7 @@ function getExperienceOutput(): string {
   return cv.experience
     .map((xp) => {
       return `${xp.role} - ${xp.company} (${xp.location})
-${xp.startDate.getFullYear()} - ${xp.endDate?.getFullYear() || 'present'}`
+${xp.startDate.getFullYear()} - ${xp.endDate?.getFullYear() ?? 'present'}`
     })
     .join('\n\n')
 }

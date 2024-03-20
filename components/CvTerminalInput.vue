@@ -36,12 +36,12 @@ const onTerminalEnterKey = (event: KeyboardEvent) => {
 }
 
 const onTerminalUpKey = (event: KeyboardEvent) => {
-  terminalInput.value = getPreviousCommand() || terminalInput.value
+  terminalInput.value = getPreviousCommand() ?? terminalInput.value
   event.preventDefault()
 }
 
 const onTerminalDownKey = (event: KeyboardEvent) => {
-  terminalInput.value = getNextCommand() || ''
+  terminalInput.value = getNextCommand() ?? ''
   event.preventDefault()
 }
 

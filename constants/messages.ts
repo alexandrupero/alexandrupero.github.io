@@ -5,7 +5,7 @@ export const MESSAGE_TERMINAL_HELLO = `
 | virtually meet you!        |
 |                            |
 | To see a list of supported |
-\\ commands, run: help        /
+\\ commands, type: help       /
  ----------------------------`
 
 export const MESSAGE_TERMINAL_HELLO_CAT = `
