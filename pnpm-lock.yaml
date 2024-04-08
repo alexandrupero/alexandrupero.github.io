@@ -92,8 +92,8 @@ devDependencies:
     specifier: ^0.6.10
     version: 0.6.10(nuxt@3.11.1)(vite@5.2.6)(vue@3.4.21)
   nuxt-security:
-    specifier: ^1.3.0
-    version: 1.3.0
+    specifier: ^1.3.1
+    version: 1.3.1
   nuxt-vite:
     specifier: ^0.3.5
     version: 0.3.5(postcss@8.4.38)(sass@1.72.0)(vue-template-compiler@2.7.16)(vue@3.4.21)
@@ -8838,8 +8838,8 @@ packages:
       - vue
     dev: true
 
-  /nuxt-security@1.3.0:
-    resolution: {integrity: sha512-uoVYNOcFg1NgYRZEXXSoyNWYlUzZq0yUKg7dFFppKTwF2+QaFhXtL7yrXxq90payLWL6F2mrjp9v7D12TA0pGQ==}
+  /nuxt-security@1.3.1:
+    resolution: {integrity: sha512-IzomR5lj1wgk4eALQK7z1GoBZoNYkCmLs3dGeVRmAkFIGrLftZqRxwWDia1HYgqiF4nGInHu/JxGEEvuZaq0yg==}
     dependencies:
       '@nuxt/kit': 3.11.1
       basic-auth: 2.0.1
