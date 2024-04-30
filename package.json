@@ -27,7 +27,7 @@
     "daisyui": "^4.10.1",
     "nuxt": "^3.11.2",
     "pinia": "^2.1.7",
-    "vue": "^3.4.21"
+    "vue": "^3.4.26"
   },
   "devDependencies": {
     "@babel/core": "^7.24.4",
