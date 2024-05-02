@@ -137,8 +137,8 @@ devDependencies:
     specifier: ^2.7.16
     version: 2.7.16
   vuetify:
-    specifier: ^3.5.16
-    version: 3.5.16(typescript@5.4.5)(vue@3.4.21)
+    specifier: ^3.6.2
+    version: 3.6.2(typescript@5.4.5)(vue@3.4.21)
   webpack:
     specifier: ^5.91.0
     version: 5.91.0
@@ -12787,8 +12787,8 @@ packages:
       '@vue/shared': 3.4.21
       typescript: 5.4.5
 
-  /vuetify@3.5.16(typescript@5.4.5)(vue@3.4.21):
-    resolution: {integrity: sha512-jyApfATreFMkgjvK0bL7ntZnr+p9TU73+4E3kX6fIvUitdAP9fltG7yj+v3k14HLqZRSNhTL1GhQ95DFx631zw==}
+  /vuetify@3.6.2(typescript@5.4.5)(vue@3.4.21):
+    resolution: {integrity: sha512-Bv+MS11A0VogBoAhlTUhIwoXJGpddIJJ7DmqQ7Itb3/UcUmFSY7AtBVIix/amlDD/Qkpo2CJBep6c5813TSdSw==}
     engines: {node: ^12.20 || >=14.13}
     peerDependencies:
       typescript: '>=4.7'
