@@ -137,8 +137,8 @@ devDependencies:
     specifier: ^2.7.16
     version: 2.7.16
   vuetify:
-    specifier: ^3.5.16
-    version: 3.5.16(typescript@5.4.5)(vue@3.4.27)
+    specifier: ^3.6.10
+    version: 3.6.10(typescript@5.4.5)(vue@3.4.27)
   webpack:
     specifier: ^5.91.0
     version: 5.91.0
@@ -2767,7 +2767,7 @@ packages:
       colorette: 2.0.20
       consola: 3.2.3
       fast-glob: 3.3.2
-      magic-string: 0.30.9
+      magic-string: 0.30.10
       pathe: 1.1.2
       perfect-debounce: 1.0.0
     transitivePeerDependencies:
@@ -2807,7 +2807,7 @@ packages:
       '@unocss/rule-utils': 0.58.6
       css-tree: 2.3.1
       fast-glob: 3.3.2
-      magic-string: 0.30.9
+      magic-string: 0.30.10
       postcss: 8.4.38
 
   /@unocss/preset-attributify@0.58.6:
@@ -2871,7 +2871,7 @@ packages:
     engines: {node: '>=14'}
     dependencies:
       '@unocss/core': 0.58.6
-      magic-string: 0.30.9
+      magic-string: 0.30.10
 
   /@unocss/scope@0.58.6:
     resolution: {integrity: sha512-22BDrZPOkfEKuXY4NROhY+J25TAXN+GIxZpE4IbT1Wh+dkjnMXyC85VKGzOAuY/0v0zbaj12dYkmtndueQ/04w==}
@@ -2922,7 +2922,7 @@ packages:
       '@unocss/transformer-directives': 0.58.6
       chokidar: 3.6.0
       fast-glob: 3.3.2
-      magic-string: 0.30.9
+      magic-string: 0.30.10
       vite: 5.2.10(@types/node@20.12.4)(sass@1.75.0)
     transitivePeerDependencies:
       - rollup
@@ -12748,8 +12748,8 @@ packages:
       '@vue/shared': 3.4.27
       typescript: 5.4.5
 
-  /vuetify@3.5.16(typescript@5.4.5)(vue@3.4.27):
-    resolution: {integrity: sha512-jyApfATreFMkgjvK0bL7ntZnr+p9TU73+4E3kX6fIvUitdAP9fltG7yj+v3k14HLqZRSNhTL1GhQ95DFx631zw==}
+  /vuetify@3.6.10(typescript@5.4.5)(vue@3.4.27):
+    resolution: {integrity: sha512-Myd9+EFq4Gmu61yKPNVS0QdGQkcZ9cHom27wuvRw7jgDxM+X4MT9BwQRk/Dt1q3G3JlK8oh+ZYyq5Ps/Z73cMg==}
     engines: {node: ^12.20 || >=14.13}
     peerDependencies:
       typescript: '>=4.7'
