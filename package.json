@@ -63,7 +63,7 @@
     "stylelint-config-standard": "^36.0.0",
     "typescript": "^5.4.5",
     "ufo": "^1.5.3",
-    "vite": "^5.2.12",
+    "vite": "^5.3.5",
     "vite-plugin-stylelint": "^5.3.1",
     "vue-server-renderer": "^2.7.16",
     "vue-template-compiler": "^2.7.16",
