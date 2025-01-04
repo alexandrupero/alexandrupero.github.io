@@ -10,7 +10,7 @@
           aria-label="Show Terminal"
           @change="onChecked"
         />
-        <IconCSS name="mdi:console" size="32" />
+        <Icon name="mdi:console" size="32" />
       </label>
     </div>
     <div class="navbar-center">

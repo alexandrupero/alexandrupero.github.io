@@ -7,21 +7,21 @@
           :href="cv.contact.matrix"
           aria-label="Contact me through Matrix"
         >
-          <IconCSS name="simple-icons:matrix" size="20" />
+          <Icon name="simple-icons:matrix" size="20" />
         </a>
         <a
           target="_blank"
           :href="cv.contact.github"
           aria-label="Contact me through GitHub"
         >
-          <IconCSS name="uil:github-alt" size="20" />
+          <Icon name="uil:github-alt" size="20" />
         </a>
         <a
           target="_blank"
           :href="cv.contact.linkedin"
           aria-label="Contact me through LinkedIn"
         >
-          <IconCSS name="uil:linkedin-alt" size="20" />
+          <Icon name="uil:linkedin-alt" size="20" />
         </a>
       </div>
     </div>
