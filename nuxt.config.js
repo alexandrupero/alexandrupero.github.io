@@ -94,4 +94,6 @@ export default {
       maintenanceMode: process.env.MAINTENANCE_MODE,
     },
   },
+
+  compatibilityDate: '2025-01-04',
 }

@@ -72,7 +72,6 @@ const cv: CvData = {
       endDate: null,
       responsibilities: [
         'Building a SaaS-based security and enablement solution for generative AI enterprise applications',
-        'Contributing to the backend team that developed and launched the initial version of CalypsoAI',
       ],
     },
     {
