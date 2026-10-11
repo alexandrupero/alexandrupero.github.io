@@ -3,22 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#1c1917" />
+
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <meta name="format-detection" content="telephone=no" />
+    <link rel="apple-touch-icon" href="/avatar.png" />
+    <link rel="canonical" href="https://alexandrupero.github.io/" />
+    <link
+      rel="preload"
+      as="image"
+      href="/avatar-192.webp"
+      imagesrcset="/avatar-96.webp 1x, /avatar-192.webp 2x"
+      fetchpriority="high"
+    />
 
     <title>Alex Roman - Developer Portfolio</title>
     <meta
       name="description"
       content="Developer portfolio website for Alex Roman, showcasing skills, experience and contact information."
     />
+    <meta name="format-detection" content="telephone=no" />
 
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Alex Roman" />
+    <meta property="og:url" content="https://alexandrupero.github.io/" />
     <meta property="og:title" content="Alex Roman - Developer Portfolio" />
     <meta
       property="og:description"
       content="Developer portfolio website for Alex Roman, showcasing skills, experience and contact information."
     />
-    <meta property="og:image" content="/avatar.png" />
+    <meta
+      property="og:image"
+      content="https://alexandrupero.github.io/avatar.png"
+    />
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Alex Roman - Developer Portfolio" />
@@ -26,7 +43,30 @@
       name="twitter:description"
       content="Developer portfolio website for Alex Roman, showcasing skills, experience and contact information."
     />
-    <meta name="twitter:image" content="/avatar.png" />
+    <meta
+      name="twitter:image"
+      content="https://alexandrupero.github.io/avatar.png"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Alex Roman",
+        "jobTitle": "Senior Software Engineer",
+        "url": "https://alexandrupero.github.io/",
+        "sameAs": [
+          "https://github.com/alexandrupero",
+          "https://linkedin.com/in/alexandrupetruroman"
+        ],
+        "knowsAbout": [
+          "Software Engineering",
+          "Software Architecture",
+          "Distributed Systems",
+          "Cloud Computing"
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="app"></div>

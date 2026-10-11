@@ -6,12 +6,12 @@
         v-model.trim="terminalInput"
         type="text"
         placeholder="Type here"
+        aria-label="Terminal command input"
         class="terminal-input"
         autofocus
         @keyup.enter="onTerminalEnterKey"
         @keydown.up="onTerminalUpKey"
         @keydown.down="onTerminalDownKey"
-        @keydown.tab="($event) => $event.preventDefault()"
       />
     </code>
   </div>

@@ -8,7 +8,7 @@
           :href="cv.contact.matrix"
           aria-label="Contact me through Matrix"
         >
-          <Icon icon="simple-icons:matrix" width="20" />
+          <Icon icon="simple-icons:matrix" width="20" aria-hidden="true" />
         </a>
         <a
           target="_blank"
@@ -16,7 +16,7 @@
           :href="cv.contact.github"
           aria-label="Contact me through GitHub"
         >
-          <Icon icon="uil:github-alt" width="20" />
+          <Icon icon="uil:github-alt" width="20" aria-hidden="true" />
         </a>
         <a
           target="_blank"
@@ -24,7 +24,7 @@
           :href="cv.contact.linkedin"
           aria-label="Contact me through LinkedIn"
         >
-          <Icon icon="uil:linkedin-alt" width="20" />
+          <Icon icon="uil:linkedin-alt" width="20" aria-hidden="true" />
         </a>
       </div>
     </div>

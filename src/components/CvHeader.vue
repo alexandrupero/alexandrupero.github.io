@@ -1,5 +1,6 @@
 <template>
   <div class="navbar bg-base-100 justify-center">
+    <h1 class="sr-only">Alex Roman - Developer Portfolio</h1>
     <div class="navbar-start">
       <label class="label cursor-pointer gap-4">
         <input
@@ -9,12 +10,20 @@
           aria-label="Show Terminal"
           @change="onChecked"
         />
-        <Icon icon="mdi:console" width="32" />
+        <Icon icon="mdi:console" width="32" aria-hidden="true" />
       </label>
     </div>
     <div class="navbar-center">
       <div class="w-24 mask mask-hexagon">
-        <img src="/avatar.png" alt="avatar image" width="192" height="192" />
+        <img
+          src="/avatar-192.webp"
+          srcset="/avatar-96.webp 1x, /avatar-192.webp 2x"
+          width="96"
+          height="96"
+          alt="Portrait of Alex Roman"
+          decoding="async"
+          fetchpriority="high"
+        />
       </div>
     </div>
   </div>
