@@ -15,6 +15,17 @@ the toggle in the header.
 Package-manager settings live in `pnpm-workspace.yaml` (pnpm's config file since
 v10), including the allowlist for dependency build scripts.
 
+## Toolchain
+
+Most tooling tracks the latest stable releases (Vite 8, Vitest 5, ESLint 10,
+TypeScript 5.9, vue-tsc 3). A few versions are intentionally held:
+
+- **Tailwind 3 + daisyUI 4** — the design/styling will be revisited separately,
+  at which point a Tailwind 4 / daisyUI 5 migration can be evaluated.
+- **TypeScript 5.9** — TypeScript 7 is the new native compiler; holding until
+  the Vue toolchain (vue-tsc) fully supports it.
+- **@types/node 24** — matches the Node 24 LTS used in CI.
+
 ## Build Setup
 
 ```bash

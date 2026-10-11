@@ -2,6 +2,14 @@
   "name": "alexandrupero.github.io",
   "version": "0.3.0",
   "private": true,
+  "description": "Terminal-style developer portfolio for Alex Roman (Vite + Vue 3 SPA).",
+  "license": "MIT",
+  "author": "Alex Roman",
+  "homepage": "https://alexandrupero.github.io",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandrupero/alexandrupero.github.io.git"
+  },
   "type": "module",
   "engines": {
     "node": ">=22"
@@ -28,38 +36,39 @@
     "*.**": "prettier --check --ignore-unknown"
   },
   "dependencies": {
-    "@iconify/vue": "^5.0.0",
-    "vue": "^3.5.13"
+    "@iconify/vue": "^5.0.3",
+    "vue": "^3.5.43"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.6.1",
-    "@commitlint/config-conventional": "^19.6.0",
-    "@eslint/js": "^9.39.5",
+    "@commitlint/cli": "^21.2.3",
+    "@commitlint/config-conventional": "^21.2.3",
+    "@eslint/js": "^10.0.1",
     "@iconify-json/mdi": "^1.2.3",
     "@iconify-json/simple-icons": "^1.2.20",
     "@iconify-json/uil": "^1.2.2",
-    "@types/node": "^22",
-    "@vitejs/plugin-vue": "^5.2.1",
-    "@vue/eslint-config-prettier": "^10.1.0",
-    "@vue/eslint-config-typescript": "^14.2.0",
-    "@vue/test-utils": "^2.4.6",
+    "@types/node": "^24.19.2",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "@vue/eslint-config-typescript": "^14.9.0",
+    "@vue/test-utils": "^2.5.1",
     "autoprefixer": "^10.4.20",
-    "daisyui": "^4.12.23",
-    "eslint": "^9.17.0",
-    "eslint-plugin-vue": "^9.32.0",
+    "daisyui": "^4.12.24",
+    "eslint": "^10.12.0",
+    "eslint-plugin-vue": "^10.11.1",
+    "globals": "^17.13.0",
     "husky": "^9.1.7",
-    "jsdom": "^25.0.1",
-    "lint-staged": "^15.3.0",
-    "postcss": "^8.4.49",
+    "jsdom": "^30.1.2",
+    "lint-staged": "^17.6.0",
+    "postcss": "^8.5.29",
     "postcss-html": "^2.0.0",
-    "prettier": "^3.4.2",
-    "stylelint": "^17.0.0",
-    "stylelint-config-recommended-vue": "^1.6.1",
+    "prettier": "^3.9.10",
+    "stylelint": "^17.16.0",
+    "stylelint-config-recommended-vue": "^2.0.0",
     "stylelint-config-standard": "^40.0.0",
-    "tailwindcss": "^3.4.17",
-    "typescript": "~5.7.2",
-    "vite": "^6.0.7",
-    "vitest": "^3.0.0",
-    "vue-tsc": "^2.2.0"
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.3",
+    "vue-tsc": "^3.3.12"
   }
 }
