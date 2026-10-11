@@ -20,34 +20,31 @@ permissions:
 
 # Allow one concurrent deployment
 concurrency:
-  group: 'pages'
+  group: pages
   cancel-in-progress: true
 
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
-    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [lts/*]
 
     steps:
-      - name: Checkout 🛎
+      - name: Checkout
         uses: actions/checkout@v7
+        with:
+          persist-credentials: false
 
-      - name: Setup pnpm 📦
+      - name: Setup pnpm
         uses: pnpm/action-setup@v6
 
-      - name: Setup node env 🏗
+      - name: Setup Node
         uses: actions/setup-node@v7
         with:
-          node-version: ${{ matrix.node }}
+          node-version: lts/*
           cache: pnpm
 
       - name: Setup Pages
@@ -56,14 +53,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build 🏗
+      - name: Build
         run: pnpm build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
           # Upload the Vite build output
-          path: 'dist'
+          path: dist
 
       - name: Deploy to GitHub Pages
         id: deployment
