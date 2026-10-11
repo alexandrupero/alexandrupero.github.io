@@ -68,9 +68,6 @@ typings/
 # nuxt.js build output
 .nuxt
 
-# Nuxt generate
-dist
-
 # vuepress build output
 .vuepress/dist
 
@@ -94,3 +91,6 @@ sw.*
 
 # build artifacts
 .output
+dist
+.vite
+*.tsbuildinfo

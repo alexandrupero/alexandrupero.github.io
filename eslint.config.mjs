@@ -1,35 +1,19 @@
-import globals from 'globals'
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
 import js from '@eslint/js'
-import { FlatCompat } from '@eslint/eslintrc'
-
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
-})
+import pluginVue from 'eslint-plugin-vue'
+import vueTsEslintConfig from '@vue/eslint-config-typescript'
+import skipFormatting from '@vue/eslint-config-prettier/skip-formatting'
 
 export default [
-  ...compat.extends(
-    '@nuxtjs/eslint-config-typescript',
-    'plugin:nuxt/recommended',
-    'prettier',
-  ),
   {
-    plugins: {},
-
-    languageOptions: {
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-      },
-    },
-
-    rules: {
-      'vue/require-v-for-key': 'off',
-    },
+    name: 'app/files-to-lint',
+    files: ['**/*.{js,mjs,ts,vue}'],
   },
+  {
+    name: 'app/files-to-ignore',
+    ignores: ['dist/**', 'coverage/**', 'node_modules/**'],
+  },
+  js.configs.recommended,
+  ...pluginVue.configs['flat/recommended'],
+  ...vueTsEslintConfig(),
+  skipFormatting,
 ]
