@@ -1,0 +1,22 @@
+<template>
+  <main>
+    <div class="grid grid-cols-2 text-xs sm:text-sm 2xl:text-lg">
+      <CvGuiItem :items="cv.languages" title="Languages" />
+      <CvGuiItem :items="cv.frameworks" title="Frameworks" />
+      <CvGuiItem :items="cv.tools" title="Tools" />
+      <CvGuiItem :items="cv.skills" title="Skills" />
+      <CvGuiItem :items="uniqueExperienceItems" title="Experience" />
+    </div>
+  </main>
+</template>
+
+<script setup lang="ts">
+import CvGuiItem from '@/components/CvGuiItem.vue'
+import cv from '@/data/cv'
+
+const uniqueExperienceItems = [
+  ...new Set(
+    cv.experience.map((exp) => `${exp.company} (${exp.startDate.slice(0, 4)})`),
+  ),
+]
+</script>
